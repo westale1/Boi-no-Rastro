@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boi no Rastro - Login</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo Boi no Rastro" class="logo-img">
+            
+        </div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" placeholder="Digite seu usuário" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+            
+            <button type="submit">Entrar</button>
+            
+            <div class="error-message" id="error-message" style="display: none;">
+                Usuário ou senha incorretos!
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Dados fictícios para login
+        const validUser = {
+            username: "uniso",
+            password: "uniso"
+        };
+
+        // Função de login
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if(username === validUser.username && password === validUser.password) {
+                window.location.href = 'home.html';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

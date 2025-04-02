@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boi no Rastro - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Botão Mobile -->
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                
+                <img src="assets/img/logo.png">
+            </div>
+            
+            <nav class="menu">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cow"></i>
+                            <span>Rebanho</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Localização</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-bell"></i>
+                            <span>Alertas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=U" alt="Perfil">
+                <div class="user-info">
+                    <strong>Uniso</strong>
+                    <span>Administrador</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Monitoramento do Rebanho</h1>
+                <div class="header-actions">
+                    <button class="btn-refresh">
+                        <i class="fas fa-sync-alt"></i>
+                        Atualizar
+                    </button>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Mapa de Localização -->
+                <section class="card card-map">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-map-marked-alt"></i>
+                            Localização do Rebanho
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="map-wrapper">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.789012345678!2d-51.12345678901234!3d-30.012345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAwJzQ0LjQiUyA1McKwMDcnMjQuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <div class="cow-list">
+                                <div class="cow-marker">
+                                    <span class="cow-id">#0245</span>
+                                    <span class="cow-status"><i class="fas fa-map-pin"></i> Ativa</span>
+                                </div>
+                                <div class="cow-marker">
+                                    <span class="cow-id">#0246</span>
+                                    <span class="cow-status"><i class="fas fa-map-pin"></i> Ativa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Alertas -->
+                <section class="card card-alerts">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Alertas Recentes
+                            <span class="badge">3</span>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert urgent">
+                            <div class="alert-icon">
+                                <i class="fas fa-temperature-high"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h3>Temperatura Elevada</h3>
+                                <p>Vaca #0245 está com 39.5°C</p>
+                                <span class="alert-time">Há 15 minutos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="alert warning">
+                            <div class="alert-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h3>Fora da Zona</h3>
+                                <p>Vaca #0246 saiu do perímetro</p>
+                                <span class="alert-time">Há 2 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="view-all">Ver todos os alertas →</a>
+                    </div>
+                </section>
+
+                <!-- Saúde do Rebanho -->
+                <section class="card card-health">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-heartbeat"></i>
+                            Saúde do Rebanho
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="health-metric">
+                            <div class="metric-icon temp-cow">
+                                <i class="fas fa-temperature-low"></i>
+                            </div>
+                            <div class="metric-info">
+                                <h3>Temperatura Média</h3>
+                                <p class="metric-value">38.4°C <span class="status good">Normal</span></p>
+                                <div class="metric-range">
+                                    <span>Min: 37.8°C</span>
+                                    <span>Máx: 39.1°C</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="health-metric">
+                            <div class="metric-icon temp-env">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div class="metric-info">
+                                <h3>Temperatura Ambiente</h3>
+                                <p class="metric-value">26.2°C</p>
+                                <div class="metric-range">
+                                    <span>Umidade: 65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Menu Mobile
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+        
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            mainContent.classList.toggle('menu-open');
+        });
+
+        // Fechar menu ao clicar em um item
+        document.querySelectorAll('.menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                if(window.innerWidth <= 768) {
+                    sidebar.classList.remove('active');
+                    mainContent.classList.remove('menu-open');
+                }
+            });
+        });
+
+        // Fechar menu ao clicar fora
+        mainContent.addEventListener('click', (e) => {
+            if(window.innerWidth <= 768 && mainContent.classList.contains('menu-open')) {
+                if(!e.target.closest('.mobile-menu-btn')) {
+                    sidebar.classList.remove('active');
+                    mainContent.classList.remove('menu-open');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

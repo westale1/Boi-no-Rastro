@@ -1,0 +1,166 @@
+/* ===== VARIÁVEIS GLOBAIS ===== */
+:root {
+  --azul: #1E90FF;
+  --azul-escuro: #0078D7;
+  --azul-claro: #E6F2FF;
+  --cinza-borda: #E1E5EE;
+  --branco: #FFFFFF;
+  --branco-transparente: rgba(255, 255, 255, 0.85); /* 85% opaco */
+  --preto-transparente: rgba(0, 0, 0, 0.3); /* Overlay mais claro */
+  --sombra-azul: 0 4px 12px rgba(30, 144, 255, 0.2);
+}
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  width: 220px; /* Ajuste conforme necessário */
+  height: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ===== FUNDO ===== */
+body {
+  background-image: url('../img/fundo-fazenda.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--preto-transparente);
+  z-index: -1;
+}
+
+/* ===== CONTAINER LOGIN ===== */
+.login-container {
+  background-color: var(--branco-transparente); /* Transparência sutil */
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--sombra-azul);
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borda branca sutil */
+}
+
+/* ===== LOGO ===== */
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cow-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  color: var(--azul);
+}
+
+.logo h1 {
+  color: var(--azul);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ===== FORMULÁRIO ===== */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--azul);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo quase branco */
+  border: 1px solid var(--cinza-borda);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--azul);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+  background-color: var(--branco); /* Branco sólido no focus */
+}
+
+/* ===== BOTÃO ===== */
+button {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ===== LINK ===== */
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 1.2rem;
+  color: var(--azul);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: var(--azul-escuro);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .cow-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
