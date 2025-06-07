@@ -10,7 +10,6 @@
     <div class="login-container">
         <div class="logo">
             <img src="assets/img/logo.png" alt="Logo Boi no Rastro" class="logo-img">
-            
         </div>
         
         <form id="loginForm">
@@ -50,7 +49,8 @@
             const password = document.getElementById('password').value;
             
             if(username === validUser.username && password === validUser.password) {
-                window.location.href = 'home.html';
+                // Redireciona para o dashboard público do Ubidots
+                window.location.href = 'https://industrial.ubidots.com/app/dashboards/public/dashboard/5GSmXvotEbuT2HvguiPPK4iEgLLqSNTZVISOH6ULsHc?navbar=true&contextbar=false';
             } else {
                 errorMessage.style.display = 'block';
             }
